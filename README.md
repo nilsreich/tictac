@@ -1,3 +1,3 @@
 # tictac
 
-demo 
+demo: https://tictactoe-psi.now.sh/
