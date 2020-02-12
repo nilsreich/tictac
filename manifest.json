@@ -1,0 +1,23 @@
+{
+	"dir" : "ltr",
+	"lang" : "English",
+	"name" : "TicTacToe",
+	"scope" : "/",
+	"display" : "minimal-ui",
+	"start_url" : "https://tictactoe-psi.now.sh/",
+	"short_name" : "TicTacToe",
+	"theme_color" : "transparent",
+	"description" : "TicTacToe Game",
+	"orientation" : "any",
+	"background_color" : "transparent",
+	"related_applications" : [],
+	"prefer_related_applications" : false,
+	"icons" : [        {
+        "src": "pic.png",
+        "sizes": "512x512",
+        "type": "image/png"
+    }],
+	"url" : "https://tictactoe-psi.now.sh/",
+	"screenshots" : [],
+	"generated" : "true"
+}
