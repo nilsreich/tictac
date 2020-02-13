@@ -1,11 +1,13 @@
+html,
 body {
   font-family: "Roboto", sans-serif;
-  height: 100vh;
+  height: 100%;
   color: white;
-  font-size: 4.5vh;
-  overflow: hidden;
   position: relative;
-  background-image: linear-gradient(
+  overflow-y: hidden;
+  margin: 0;
+  font-size: 4.5vh;
+  background: linear-gradient(
     to right top,
     #051937,
     #03235e,
@@ -13,29 +15,42 @@ body {
     #5226a5,
     #8600c0
   );
+  z-index: 1;
 }
 
 .modal {
-  display: none;
-  position: fixed;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.4);
-  z-index: 1;
-  backdrop-filter: blur(4px);
-}
-
-.modal div {
   position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 90vw;
-  -ms-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
+  left: calc(50vw - 150px);
+  top: calc(50vh - 50px);
+  width: 300px;
+  height: 100px;
+  border-radius: 5px;
+  background-color: white;
+  color: black;
   font-weight: 900;
-  font-size: 14vw;
+  font-size: 20pt;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  transition: all 500ms;
+}
+.modal::after {
+  position: absolute;
+  display: block;
+  content: "";
+  width: 100vw;
+  height: 100vh;
+  background-color: black;
+  z-index: -1;
+  opacity: 0.4;
+}
+.modal.hidden {
+  opacity: 0;
+  z-index: -1;
+}
+.modal.hidden + .parent {
+  z-index: -1;
 }
 
 .parent {
@@ -51,6 +66,7 @@ body {
   left: 50%;
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
+  z-index: -2;
 }
 
 .parent div {

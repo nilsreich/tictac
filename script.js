@@ -17,14 +17,14 @@ function wergewinnt() {
   if ((max.includes(3)) || (min.includes(-3))) {
     if (max.includes(3)) { document.getElementById('winner').innerHTML = 'RED WINS!'; }
     if (min.includes(-3)) { document.getElementById('winner').innerHTML = 'BLUE WINS!'; }
-    document.getElementById('modal').style.display = 'block';
+    document.getElementById('modal').classList.remove("hidden");
     document.getElementById('par').removeEventListener('click', kreuzesetzen);
     document.getElementById('reset').addEventListener('click', reset);
   }
 }
 
 function reset() {
-  document.getElementById('modal').style.display = 'none';
+  document.getElementById('modal').classList.add("hidden");
   count = 0;
   clicked = [0, 0, 0, 0, 0, 0, 0, 0, 0];
   document.getElementById('par').addEventListener('click', kreuzesetzen);
