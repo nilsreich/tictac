@@ -1,5 +1,5 @@
 /* eslint-disable no-use-before-define */
-let count = 0; // wieso nicht player = "kreuz" oder "a"
+let player = "a"
 let clicked = [0, 0, 0, 0, 0, 0, 0, 0, 0];
 
 function wergewinnt() {
@@ -37,17 +37,15 @@ function reset() {
 
 function kreuzesetzen(e) {
   if (e.target.className !== 'clickedA' && e.target.className !== 'clickedB') {
-    // und dann nicht player === "kreuz" und ... player === "kreis"
-    if (count % 2 === 0) {
+    if (player === "a") {
       e.target.className = 'clickedA';
       clicked[e.target.id] = 1;
     } else {
       e.target.className = 'clickedB';
       clicked[e.target.id] = -1;
     }
-    wergewinnt(e.target.className);
-    count += 1; // und player = player === "kreuz" ? "kreis" : "kreuz"
-    // fände ich besser zu lesen
+    wergewinnt();
+    player = player === "a" ? "b" : "a"
   }
 }
 
