@@ -37,8 +37,8 @@ body {
   margin: auto;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(3, 1fr);
-  grid-column-gap: 0.5vh;
-  grid-row-gap: 0.5vh;
+  column-gap: 0.5vh;
+  row-gap: 0.5vh;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -48,7 +48,7 @@ body {
 
 .parent div {
   background-color: hsl(174, 100%, 85%);
-  height: 16vh;
+  height: 15vh;
   border-radius: 4px;
 }
 
