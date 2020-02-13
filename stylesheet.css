@@ -1,11 +1,18 @@
 body {
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   height: 100vh;
   color: white;
   font-size: 4.5vh;
   overflow: hidden;
   position: relative;
-  background-image: linear-gradient(to right top, #051937, #03235e, #252984, #5226a5, #8600c0);
+  background-image: linear-gradient(
+    to right top,
+    #051937,
+    #03235e,
+    #252984,
+    #5226a5,
+    #8600c0
+  );
 }
 
 .modal {
@@ -50,38 +57,13 @@ body {
   background-color: hsl(174, 100%, 85%);
   height: 15vh;
   border-radius: 4px;
+  transition: background 500ms;
 }
 
 .parent .clickedA {
   background-color: rgb(196, 42, 188);
-  animation-name: example;
-  animation-duration: 0.5s;
-}
-
-@keyframes example {
-  from {
-    background-color: hsl(174, 100%, 85%);
-  }
-
-  to {
-    background-color: rgb(196, 42, 188);
-  }
-
 }
 
 .parent .clickedB {
   background-color: rgb(31, 136, 197);
-  animation-name: example1;
-  animation-duration: 0.5s;
-}
-
-@keyframes example1 {
-  from {
-    background-color: hsl(174, 100%, 85%);
-  }
-
-  to {
-    background-color: rgb(31, 136, 197);
-  }
-
 }
