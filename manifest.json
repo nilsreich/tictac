@@ -3,7 +3,7 @@
 	"lang" : "English",
 	"name" : "TicTacToe",
 	"scope" : "/",
-	"display" : "minimal-ui",
+	"display" : "standalone",
 	"start_url" : "https://tictactoe-psi.now.sh/",
 	"short_name" : "TicTacToe",
 	"theme_color" : "transparent",
