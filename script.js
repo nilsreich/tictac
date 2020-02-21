@@ -4,6 +4,7 @@ let points = { a: 0, b: 0 };
 const tttAreaDIV = document.querySelector(".ttt-area");
 const cellsDIV = document.querySelectorAll(".ttt-area div");
 const modalDIV = document.querySelector(".modal");
+const scoreDIV = document.querySelector(".score")
 modalDIV.querySelector(".reset").addEventListener("click", render)
 function controlLines(cellIndex) {
   /* get vertical and horizontal rows in which the cell is 
@@ -30,6 +31,7 @@ function controlLines(cellIndex) {
     row.every(index => cellsDIV[index].classList.contains(player))
   )
     ? "point"
+    // checks whether each cell contains a class
     : lines.every(row =>
         row.every(index => cellsDIV[index].classList.length === 1)
       )
@@ -55,8 +57,10 @@ cellsDIV.forEach((cell, index) =>
       modalDIV.classList.remove("hidden");
       modalDIV.querySelector(".winner").textContent =
         status === "draw" ? "DRAW" : player === "a" ? "RED WINS" : "BLUE WINS";
-      if(status === "point") points[player]++
-      modalDIV.querySelector(".points").textContent = `${points["a"]}:${points["b"]}`
+      if(status === "point")
+        points[player]++
+        scoreDIV.children[0].textContent = points.a
+        scoreDIV.children[1].textContent = points.b
     }
     player = player === "a" ? "b" : "a";
   })

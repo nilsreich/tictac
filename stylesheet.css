@@ -85,9 +85,24 @@ h1{
 }
 
 .ttt-area .a {
-  background-color: hsl(303, 65%, 47%);
+  background-color: #c62abe;
 }
 
 .ttt-area .b {
-  background-color: hsl(202, 73%, 45%);
+  background-color: #1f89c7;
+}
+
+.score{
+  position: absolute;
+  top: 75%;
+  left: 50%;
+  transform: translate(-50%, 0%);
+  font-weight: bold;
+  font-size: 20pt;
+}
+.score span.a{
+  color: #c62abe;
+}
+.score span.b{
+  color: #1f89c7;
 }
